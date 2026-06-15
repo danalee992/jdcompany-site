@@ -5,14 +5,14 @@
       "title": "생활용품 사출 양산",
       "description": "금형 설계부터 사출·조립·포장까지 일괄 진행해 안정적인 양산 체계를 구축한 사례.",
       "tag": "Turn-key",
-      "image": "/assets/images/portfolio-1.jpg"
+      "image": "/assets/images/고리장난감.png"
     },
     {
       "category": "주방용품 · 리브랜딩",
       "title": "기존 제품 리브랜딩",
       "description": "판매가 정체된 제품에 새 디자인과 패키지를 입혀 온라인 판로를 재개척한 사례.",
       "tag": "Rebranding",
-      "image": "/assets/images/portfolio-2.jpg"
+      "image": "/assets/images/디자인옷걸이.jpg"
     },
     {
       "category": "소비재 · 제작–유통",
@@ -33,14 +33,14 @@
       "title": "산업용 부품 양산",
       "description": "정밀도가 요구되는 부품을 금형부터 검수까지 일괄로 책임진 사례.",
       "tag": "Turn-key",
-      "image": "/assets/images/portfolio-5.jpg"
+      "image": "/assets/images/img_5468.jpg"
     },
     {
       "category": "복합 소재 · 연계 제작",
       "title": "타 분야 연계 제작",
       "description": "플라스틱뿐 아니라 타 제조 분야(후가공, 플라스틱 외 재료, 별개의 가공법)와 연계하여 복합적인 플로우로 완성한 제품 제작 사례.",
       "tag": "Multi-material",
-      "image": "/assets/images/portfolio-6.jpg"
+      "image": "/assets/images/글리피세척컵.png"
     }
   ]
 }
