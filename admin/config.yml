@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# 한국어 UI
+locale: ko
+
+# 사진 업로드 위치 (저장소 경로 / 사이트에서 불러올 경로)
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "portfolio"
+    label: "포트폴리오"
+    description: "포트폴리오 사례를 추가·수정·삭제합니다."
+    files:
+      - name: "items"
+        label: "사례 목록"
+        file: "data/portfolio.json"
+        format: json
+        fields:
+          - label: "사례"
+            name: "items"
+            label_singular: "사례"
+            widget: "list"
+            summary: "{{fields.title}} ({{fields.category}})"
+            fields:
+              - { label: "분류", name: "category", widget: "string", hint: "예: 생활용품 · 턴키 제조" }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "설명", name: "description", widget: "text" }
+              - { label: "태그", name: "tag", widget: "string", required: false, hint: "오른쪽 상단 라벨. 예: Turn-key, Rebranding" }
+              - { label: "사진", name: "image", widget: "image", required: false, hint: "없으면 이미지 없이 표시됩니다." }

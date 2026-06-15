@@ -1,0 +1,5 @@
+# 시스템 파일
+.DS_Store
+
+# gstack 작업 캐시 (배포 불필요)
+.gstack/
