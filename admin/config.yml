@@ -30,3 +30,22 @@ collections:
               - { label: "설명", name: "description", widget: "text" }
               - { label: "태그", name: "tag", widget: "string", required: false, hint: "오른쪽 상단 라벨. 예: Turn-key, Rebranding" }
               - { label: "사진", name: "image", widget: "image", required: false, hint: "없으면 이미지 없이 표시됩니다." }
+
+  - name: "partners"
+    label: "클라이언트·협력사 로고"
+    description: "홈 화면에 표시되는 로고를 추가·수정·삭제합니다. 로고가 없으면 섹션이 자동으로 숨겨집니다."
+    files:
+      - name: "items"
+        label: "로고 목록"
+        file: "data/partners.json"
+        format: json
+        fields:
+          - label: "로고"
+            name: "items"
+            label_singular: "로고"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "회사명", name: "name", widget: "string", hint: "마우스를 올리면 표시됩니다." }
+              - { label: "로고 이미지", name: "image", widget: "image", hint: "배경이 투명한 PNG 권장." }
+              - { label: "홈페이지 링크", name: "url", widget: "string", required: false, hint: "있으면 로고 클릭 시 새 창으로 열립니다." }
