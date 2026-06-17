@@ -1,3 +1,24 @@
 {
-  "items": []
+  "items": [
+    {
+      "image": "/assets/images/세스코.jpg",
+      "name": "세스코"
+    },
+    {
+      "image": "/assets/images/에센루.png",
+      "name": "에센루"
+    },
+    {
+      "image": "/assets/images/트래쉬버스터즈.jpg",
+      "name": "트래쉬버스터즈"
+    },
+    {
+      "image": "/assets/images/보아스헬스.jpeg",
+      "name": "보아스헬스"
+    },
+    {
+      "image": "/assets/images/꽃길.png",
+      "name": "꽃길"
+    }
+  ]
 }
