@@ -11,7 +11,7 @@
 | `portfolio-1.jpg` | 생활용품 사출 양산 |
 | `portfolio-2.jpg` | 기존 제품 리브랜딩 |
 | `portfolio-3.jpg` | 제작–유통 통합 |
-| `portfolio-4.jpg` | 아이디어 제품화 컨설팅 |
+| `portfolio-4.jpg` | 아이디어 제품화 코칭 |
 | `portfolio-5.jpg` | 산업용 부품 양산 |
 | `portfolio-6.jpg` | 타 분야 연계 제작 |
 
