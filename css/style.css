@@ -175,21 +175,31 @@ p { margin: 0 0 1em; }
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+  text-decoration: none;
+  line-height: 1;
+}
+.brand-box {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: var(--accent);
   font-weight: 800;
-  letter-spacing: -0.03em;
-  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  font-size: 1rem;
+  padding: 5px 9px;
+  border-radius: 7px;
 }
-.brand .dot {
-  width: 11px; height: 11px;
-  border-radius: 50%;
-  background: var(--accent-grad);
-  box-shadow: 0 0 14px rgba(45, 212, 191, 0.7);
+.brand-box .tri {
+  display: inline-block;
+  width: 0; height: 0;
+  margin-left: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
 }
-.brand b { font-weight: 800; }
-.brand span { color: var(--text-dim); font-weight: 500; font-size: 0.95rem; }
 
 .nav-links {
   display: flex;
