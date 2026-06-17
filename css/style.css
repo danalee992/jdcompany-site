@@ -1,6 +1,6 @@
 /* =========================================================
    JDCOMPANY — 공통 스타일
-   다크 네이비 + 산뜻한 틸/시안 액센트 (Young Wave of Plastic)
+   다크 네이비 + 선명한 레드 액센트 (Young Wave of Plastic)
    ========================================================= */
 
 :root {
@@ -14,9 +14,9 @@
   --text-dim: #9aa7bd;     /* 다크 위 보조 */
   --text-dark: #1b2436;    /* 라이트 위 본문 */
   --text-dark-dim: #5b6577; /* 라이트 위 보조 */
-  --accent: #2dd4bf;       /* 틸 */
-  --accent-2: #38bdf8;     /* 시안 */
-  --accent-grad: linear-gradient(120deg, #2dd4bf 0%, #38bdf8 100%);
+  --accent: #ef4444;       /* 레드 */
+  --accent-2: #fb7185;     /* 코랄 */
+  --accent-grad: linear-gradient(120deg, #ef4444 0%, #fb7185 100%);
 
   /* 타이포 */
   --font: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
@@ -98,7 +98,7 @@ p { margin: 0 0 1em; }
   color: var(--text-dark);
 }
 
-.section--light .eyebrow { color: #0d9488; }
+.section--light .eyebrow { color: #dc2626; }
 .section--light p { color: var(--text-dark-dim); }
 
 .section-head { max-width: 680px; margin-bottom: 56px; }
@@ -321,12 +321,12 @@ p { margin: 0 0 1em; }
 }
 .hero-visual .b1 {
   width: 56%; height: 56%; left: -8%; top: 8%;
-  background: radial-gradient(circle at 35% 35%, #2dd4bf, transparent 65%);
+  background: radial-gradient(circle at 35% 35%, #ef4444, transparent 65%);
   animation: float 9s var(--ease) infinite;
 }
 .hero-visual .b2 {
   width: 60%; height: 60%; right: -10%; bottom: 0%;
-  background: radial-gradient(circle at 60% 60%, #38bdf8, transparent 65%);
+  background: radial-gradient(circle at 60% 60%, #fb7185, transparent 65%);
   animation: float 11s var(--ease) infinite reverse;
 }
 .hero-visual .ring {
@@ -433,10 +433,10 @@ p { margin: 0 0 1em; }
   border-color: #e6edf4;
   box-shadow: var(--shadow-soft);
 }
-.section--light .card:hover { border-color: rgba(13, 148, 136, 0.4); }
+.section--light .card:hover { border-color: rgba(220, 38, 38, 0.4); }
 .section--light .card p { color: var(--text-dark-dim); }
 .section--light .card .icon {
-  background: rgba(13, 148, 136, 0.1); color: #0d9488;
+  background: rgba(220, 38, 38, 0.1); color: #dc2626;
 }
 
 /* =========================================================
@@ -461,7 +461,7 @@ p { margin: 0 0 1em; }
   font-weight: 800;
   font-size: 1.1rem;
   color: var(--accent);
-  background: rgba(13,148,136,0.1);
+  background: rgba(220,38,38,0.1);
   width: 44px; height: 44px;
   display: grid; place-items: center;
   border-radius: 12px;
@@ -477,7 +477,7 @@ p { margin: 0 0 1em; }
   position: relative;
   border-radius: 28px;
   padding: clamp(40px, 6vw, 72px);
-  background: linear-gradient(120deg, #0d9488 0%, #0ea5e9 100%);
+  background: linear-gradient(120deg, #dc2626 0%, #ef4444 100%);
   color: #04121a;
   overflow: hidden;
   text-align: center;
