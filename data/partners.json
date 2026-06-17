@@ -19,6 +19,10 @@
     {
       "image": "/assets/images/꽃길.png",
       "name": "꽃길"
+    },
+    {
+      "image": "/assets/images/포어시스.png",
+      "name": "포어시스"
     }
   ]
 }
