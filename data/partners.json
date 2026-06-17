@@ -23,6 +23,14 @@
     {
       "image": "/assets/images/포어시스.png",
       "name": "포어시스"
+    },
+    {
+      "name": "동해형씨",
+      "image": "/assets/images/동해형씨.jpg"
+    },
+    {
+      "name": "릴팡",
+      "image": "/assets/images/릴팡.jpeg"
     }
   ]
 }
