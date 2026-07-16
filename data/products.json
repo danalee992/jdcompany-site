@@ -1,8 +1,16 @@
 {
   "items": [
-    { "name": "고리 장난감", "image": "/assets/images/고리장난감.png" },
-    { "name": "글리피 세척컵", "image": "/assets/images/글리피세척컵.png" },
-    { "name": "꽃길", "image": "/assets/images/꽃길.png" },
-    { "name": "동해형씨", "image": "/assets/images/동해형씨.jpg" }
+    {
+      "name": "고리 장난감",
+      "image": "/assets/images/고리장난감.png"
+    },
+    {
+      "name": "글리피 세척컵",
+      "image": "/assets/images/글리피세척컵.png"
+    },
+    {
+      "name": "실버바케이스",
+      "image": "/assets/images/img_6489.jpg"
+    }
   ]
 }
