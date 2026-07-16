@@ -27,6 +27,42 @@
     {
       "image": "/assets/images/프레임.png",
       "name": "액자 프레임"
+    },
+    {
+      "name": "겔 주사기",
+      "image": "/assets/images/스크린샷-2025-12-24-오후-12.06.19.png"
+    },
+    {
+      "image": "/assets/images/요거트메이커.png",
+      "name": "요거트메이커"
+    },
+    {
+      "name": "아웃도어 와인잔",
+      "image": "/assets/images/와인잔카키2-캠핑.jpeg"
+    },
+    {
+      "image": "/assets/images/동해형씨완성품.jpg",
+      "name": "트릿 보틀"
+    },
+    {
+      "image": "/assets/images/마사지운동기구.png",
+      "name": "마사지 운동기구"
+    },
+    {
+      "image": "/assets/images/강아지물그릇.png",
+      "name": "강아지 물그릇"
+    },
+    {
+      "image": "/assets/images/아기의자.png",
+      "name": "아기 의자"
+    },
+    {
+      "image": "/assets/images/별포켓굿즈완성본4.png",
+      "name": "아이돌 앨범굿즈"
+    },
+    {
+      "image": "/assets/images/욕실의자.png",
+      "name": "욕실의자"
     }
   ]
 }
