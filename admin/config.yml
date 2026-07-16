@@ -31,6 +31,24 @@ collections:
               - { label: "태그", name: "tag", widget: "string", required: false, hint: "오른쪽 상단 라벨. 예: Turn-key, Rebranding" }
               - { label: "사진", name: "image", widget: "image", required: false, hint: "없으면 이미지 없이 표시됩니다." }
 
+  - name: "products"
+    label: "작업 제품"
+    description: "사례와 별개로, 실제 작업했던 제품을 제품명·이미지만으로 추가·수정·삭제합니다."
+    files:
+      - name: "items"
+        label: "제품 목록"
+        file: "data/products.json"
+        format: json
+        fields:
+          - label: "제품"
+            name: "items"
+            label_singular: "제품"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "제품명", name: "name", widget: "string" }
+              - { label: "사진", name: "image", widget: "image" }
+
   - name: "partners"
     label: "클라이언트·협력사 로고"
     description: "홈 화면에 표시되는 로고를 추가·수정·삭제합니다. 로고가 없으면 섹션이 자동으로 숨겨집니다."

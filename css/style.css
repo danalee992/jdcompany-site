@@ -678,6 +678,44 @@ p { margin: 0 0 1em; }
 .post-card p { color: var(--text-dim); font-size: 0.95rem; flex: 1; }
 .post-card .read { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-top: 12px; }
 
+/* 작업 제품 갤러리 (제품명 + 이미지) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.product-tile {
+  margin: 0;
+  background: var(--ink-soft);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.product-tile:hover { transform: translateY(-5px); border-color: rgba(45,212,191,0.4); }
+.product-thumb {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(135deg, #16223d, #0c1424);
+  position: relative;
+  overflow: hidden;
+}
+.product-thumb img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+/* 이미지 로드 실패 시 그래픽 배경만 유지 */
+.product-tile.no-img .product-thumb img { display: none; }
+.product-tile figcaption {
+  padding: 14px 16px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+}
+@media (max-width: 900px) { .product-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 620px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+
 /* 블로그 본문 (article) */
 .article {
   max-width: 760px;

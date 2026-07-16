@@ -6,7 +6,8 @@
   "use strict";
 
   const grid = document.querySelector("[data-portfolio-grid]");
-  if (!grid) return;
+  const productGrid = document.querySelector("[data-products-grid]");
+  if (!grid && !productGrid) return;
 
   const escape = function (str) {
     return String(str == null ? "" : str)
@@ -38,8 +39,25 @@
     return article;
   };
 
-  const revealCards = function () {
-    const cards = grid.querySelectorAll(".reveal");
+  const buildProductTile = function (item, index) {
+    const fig = document.createElement("figure");
+    fig.className = "product-tile reveal";
+    fig.setAttribute("data-delay", String(index % 4));
+
+    const img = item.image
+      ? '<img src="' + escape(item.image) + '" alt="' + escape(item.name) +
+        '" loading="lazy" onerror="this.closest(\'.product-tile\').classList.add(\'no-img\')" />'
+      : "";
+
+    fig.innerHTML =
+      '<div class="product-thumb">' + img + "</div>" +
+      '<figcaption>' + escape(item.name) + "</figcaption>";
+
+    return fig;
+  };
+
+  const revealCards = function (container) {
+    const cards = container.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window) {
       const io = new IntersectionObserver(
         function (entries) {
@@ -58,24 +76,42 @@
     }
   };
 
-  fetch("data/portfolio.json", { cache: "no-cache" })
-    .then(function (res) {
-      if (!res.ok) throw new Error("불러오기 실패");
-      return res.json();
-    })
-    .then(function (data) {
-      const items = (data && data.items) || [];
-      grid.innerHTML = "";
-      if (!items.length) {
-        grid.innerHTML =
-          '<p style="grid-column:1/-1;text-align:center;color:var(--text-dim)">등록된 사례가 곧 업데이트됩니다.</p>';
-        return;
-      }
-      items.forEach(function (item, i) { grid.appendChild(buildCard(item, i)); });
-      revealCards();
-    })
-    .catch(function () {
-      grid.innerHTML =
-        '<p style="grid-column:1/-1;text-align:center;color:var(--text-dim)">사례를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p>';
-    });
+  const renderGrid = function (container, url, build, emptyMsg, errorMsg) {
+    fetch(url, { cache: "no-cache" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("불러오기 실패");
+        return res.json();
+      })
+      .then(function (data) {
+        const items = (data && data.items) || [];
+        container.innerHTML = "";
+        if (!items.length) {
+          container.innerHTML =
+            '<p style="grid-column:1/-1;text-align:center;color:var(--text-dim)">' + emptyMsg + "</p>";
+          return;
+        }
+        items.forEach(function (item, i) { container.appendChild(build(item, i)); });
+        revealCards(container);
+      })
+      .catch(function () {
+        container.innerHTML =
+          '<p style="grid-column:1/-1;text-align:center;color:var(--text-dim)">' + errorMsg + "</p>";
+      });
+  };
+
+  if (grid) {
+    renderGrid(
+      grid, "data/portfolio.json", buildCard,
+      "등록된 사례가 곧 업데이트됩니다.",
+      "사례를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."
+    );
+  }
+
+  if (productGrid) {
+    renderGrid(
+      productGrid, "data/products.json", buildProductTile,
+      "등록된 제품이 곧 업데이트됩니다.",
+      "제품을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요."
+    );
+  }
 })();
